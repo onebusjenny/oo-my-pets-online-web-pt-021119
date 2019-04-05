@@ -1,26 +1,25 @@
 class Owner
   # code goes here
-  attr_accessor :name, :species, :pets
-  
-  
-  
+  attr_accessor :name, :pets
+  attr_reader :species
+
   @@owners = []
-  @@count = []
-  def initialize(species="human",name=nil, pets={:fishes => [], :cats => [], :dogs => []})
+
+  def initialize(species, pets = {:fishes => [], :dogs => [], :cats => []})
     @species = species
-    @name = name
-  @pets = {fishes: [], cats: [], dogs: []}
-   
-  
+    @pets = pets
+    @@owners << self
+  end
+
+  def say_species
+    "I am a #{@species}."
   end
   
   def species= (species)
     species.freez
   end
   
-  def say_species
-    "I am a #{@species}."
-  end
+  
   
   def buy_fish(fish_name)
     @pets [:fishes] << Fish.new(fish_name)
