@@ -10,6 +10,7 @@ class Owner
     @species = species
     @name = name
     @pets = {fishes: [], cats: [], dogs: []}
+    @owner << self
   end
   
   def species= (species)
