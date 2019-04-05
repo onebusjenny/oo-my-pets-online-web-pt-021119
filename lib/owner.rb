@@ -20,8 +20,8 @@ class Owner
     puts "I am a #{species}"
   end
   
-  def buy_fish
-    @pets  
+  def buy_fish(fish_name)
+    @pets [:fishes] << fish
   end
   
   
