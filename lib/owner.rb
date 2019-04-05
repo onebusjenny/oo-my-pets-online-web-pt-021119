@@ -6,7 +6,7 @@ class Owner
   
   @@owners = []
   @@count = []
-  def initialize(species="human",name=nil, pets={:fishes => [], :cats => [], :dogs => []}>)
+  def initialize(species="human",name=nil, pets={:fishes => [], :cats => [], :dogs => []})
     @species = species
     @name = name
   @pets = {fishes: [], cats: [], dogs: []}
